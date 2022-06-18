@@ -15,7 +15,7 @@
 namespace OGL
 {
 
-static const int CHAR_WIDTH = 8;
+//static const int CHAR_WIDTH = 8;
 static const int CHAR_HEIGHT = 13;
 static const int CHAR_OFFSET = 32;
 static const int CHAR_COUNT = 95;
