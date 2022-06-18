@@ -1,4 +1,6 @@
 set(CMAKE_FAKELANG_CREATE_STATIC_LIBRARY "touch <TARGET>")
+#message("Enable PCH: ${ENABLE_PCH}")
+set(ENABLE_PCH OFF)
 if(ENABLE_PCH)
 	# This is actually a .h file, but trick cmake into compiling it as a source file
 	set(pch_out_filename "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/pch.dir/pch.h")
