@@ -37,7 +37,7 @@ else()
 endif()
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux" AND NOT ANDROID)
-	option(ENABLE_EVDEV "Enables the evdev controller backend" ON)
+	option(ENABLE_EVDEV "Enables the evdev controller backend" OFF)
 endif()
 
 if(APPLE)
@@ -77,7 +77,7 @@ if (APPLE)
 		endif()
 	endif()
 endif()
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/CMakeTests)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/CMakeTests)
 # Libraries to link
 set(LIBS)
 
@@ -891,8 +891,8 @@ if(NOT DISABLE_WX)
 			add_definitions(-D__WXGTK__)
 
 			# Check for required libs
-			check_lib(GTHREAD2 gthread-2.0 gthread-2.0 glib/gthread.h REQUIRED)
-			check_lib(PANGOCAIRO pangocairo pangocairo pango/pangocairo.h REQUIRED)
+			#check_lib(GTHREAD2 gthread-2.0 gthread-2.0 glib/gthread.h REQUIRED)
+			#check_lib(PANGOCAIRO pangocairo pangocairo pango/pangocairo.h REQUIRED)
 		elseif(WIN32)
 			add_definitions(-D__WXMSW__)
 		else()
